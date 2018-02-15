@@ -31,9 +31,15 @@ export default class AddItem extends Component {
 	addItemTextChangeListener = (event) => {
 		const {name,value} = event.target;
 
+		//ES5
+		/*
 		const _obj = {};
 		_obj[name] = value;
 		this.setState(_obj);
+		*/
+
+		//ES6
+		this.setState({[name]:value});
 	}
 
 	render() {

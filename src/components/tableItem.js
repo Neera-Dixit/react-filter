@@ -9,12 +9,12 @@ export default class TableItem extends Component {
 	render() {
 		const {name,age,place,display} = this.props.dataItem;
 
-		return display  ? (
+		return display  && (
 			<tr>
 				<td>{name}</td>
 				<td>{age}</td>
 				<td>{place}</td>
 			</tr>
-		) : null;
+		);
 	}
 }
